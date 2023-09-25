@@ -7,15 +7,26 @@
         <title>Mountain Cafe</title>
     <!-- CSS -->
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
         <link href="css/style3.css" rel="stylesheet" >
         <link rel="icon" type="image/png" href="images/favicony.png">
-        
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+        <script type="text/javascript">
+            $(function(){
+                $('.menu-btn').click(function(){
+                    $('.header-nav').toggleClass('open');
+                });
+                $('.header-nav a').click(function(){
+                    $('.header-nav').toggleClass('open');
+                });
+            })
+        </script>
     </head>
     <body>
         <header class="page-header wrapper">
             <div><a href="index.html"><img class="logo" src="images/yamagoya.png" alt="やま小屋Cafe"></a></div>
-            <nav>
+            <button type="button" class="menu-btn">menu</button>
+            <nav class="header-nav">
                 <ul class="main-nav">
                     <li><a href="#about">About</a></li>
                     <li><a href="#menu">Menu</a></li>
@@ -39,8 +50,10 @@
                 
             </section>
             <section id="about">
-                <h2>About</h2>
-                <img class="anime" src="images/anime.png" alt="">
+                <div class="anime-wrapper">
+                    <h2>About</h2>
+                    <img class="anime" src="images/anime.png" alt="">
+                </div>
                 <p>「山の緑に囲まれて、心おだやかなひとときを過ごす」をコンセプトに、アルプスの中腹に山小屋を建てました。自然豊かな場所で、ゆったりと自由な時間をお楽しみください。</p>
                 
                 <div class="grid">
@@ -74,18 +87,19 @@
             </section>
             <section id="access">
                 <h2>Access</h2>
-                <div class="address">
-                    <h3>やま小屋Cafe</h3>
-                    <p>
-                        住所：〇〇県〇〇市<br>
-                        電話：xx-xxxx-xxxx<br>
-                        営業時間：10：00～20：00<br>
-                        休日：水曜
-                    </p>
-                </div>
-                <div class="map">
-                    Googleマップ 
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d51601.42885590236!2d138.23034122220454!3d36.06692582146186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e3!4m3!3m2!1d34.1929417!2d134.04244939999998!4m3!3m2!1d34.1923737!2d134.043136!5e0!3m2!1sja!2sjp!4v1695532998865!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="access-wrapper">
+                    <div class="address">
+                        <h3>やま小屋Cafe</h3>
+                        <p>
+                            住所：〇〇県〇〇市<br>
+                            電話：xx-xxxx-xxxx<br>
+                            営業時間：10：00～20：00<br>
+                            休日：水曜
+                        </p>
+                    </div>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d51601.42885590236!2d138.23034122220454!3d36.06692582146186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e3!4m3!3m2!1d34.1929417!2d134.04244939999998!4m3!3m2!1d34.1923737!2d134.043136!5e0!3m2!1sja!2sjp!4v1695532998865!5m2!1sja!2sjp" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </section>
         </article>
