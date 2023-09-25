@@ -179,6 +179,10 @@ header {
     padding:20px 0 20px 10%;
     
 }
+iframe{
+    width:800;
+    height:400;
+}
 
 
 
@@ -206,10 +210,12 @@ footer{
     }
     .image{
         width: auto;
+
         height: 70vh;
     }
     .main-container {
         padding-bottom: 150%;
+        overflow: hidden;
     }
     .page-title{
         position: absolute;
@@ -244,5 +250,10 @@ footer{
     }
     .menu-wrapper-sec{
         width: 80%;
+    }
+    ifrem{
+        width: 370px;
+        display: block;
+        padding: 0 auto;
     }
 }
